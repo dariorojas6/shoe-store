@@ -1,12 +1,11 @@
 import React from 'react'
 import { Header } from "./componentes/Header";
-// import { Carrito } from "./componentes/Carrito";
 import { DataProvider } from './componentes/context/DataProvider.js';
 import { BrowserRouter as Router } from "react-router-dom";
 import { Switch, Route } from "react-router-dom"
-// import Pages from "./componentes/Page.js";
 import  ProductosList  from './componentes/page/productos/index.js';
 import Inicio from "./componentes/page/inicio/index.js"
+import Carrito  from './componentes/carrito/index.js';
 import "boxicons";
 
 function App() {
@@ -17,7 +16,8 @@ function App() {
       <Router>
         <div className="App">
           <Header />
-          <Switch>
+          <Carrito/>
+         < Switch>
             <Route exact path="/" component={Inicio} />
             <Route exact path="/productos" component={ProductosList}/>
           </Switch>

@@ -1,18 +1,18 @@
 import React, { useContext} from "react";
-import { DataContext } from "./context/DataProvider";
+import { DataContext } from "../componentes/context/DataProvider";
 import { Link } from "react-router-dom";
-import Nike from "./images/Nike.jpg";
+import Nike from "../componentes/images/Nike.jpg";
 
 
 export const Header = () => {
   const value = useContext(DataContext);
-  // const [carrito] = value.carrito;
-  // const [menu, setMenu] = value.menu;
+  const [carrito] = value.carrito;
+  const [menu, setMenu] = value.menu;
 
 
-  // const toogleMenu = () =>{
-  //   setMenu(!menu)
-  // }
+  const toogleMenu = () =>{
+    setMenu(!menu)
+  }
  
 
   return (
@@ -33,9 +33,9 @@ export const Header = () => {
           <Link to="/productos">PRODUCTOS</Link>
         </li>
       </ul>
-      <div className="cart" >
+      <div className="cart" onClick={toogleMenu}>
         <box-icon name="cart"></box-icon>
-        {/* <span className="item__total"> {carrito.length} </span> */}
+        <span className="item__total"> {carrito.length} </span>
       </div>
     </header>
   );

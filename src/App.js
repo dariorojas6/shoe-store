@@ -5,6 +5,8 @@ import {DataProvider} from './context/DataProvider';
 import { BrowserRouter as Router} from "react-router-dom";
 import Pages from "./componentes/Page";
 import "boxicons";
+import { Toaster, toast } from 'react-hot-toast';
+
 
 function App() {
 
@@ -16,6 +18,7 @@ function App() {
       <Carrito />
       <Pages />
       </Router>
+      <Toaster />
     </div>
     </DataProvider>
   );

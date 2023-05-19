@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import Card from "../../images/img02.jpg";
 import { DataContext } from "../../context/DataProvider";
+import { Toaster, toast } from 'react-hot-toast';
 
 export const Carrito = () => {
   const value = useContext(DataContext);
@@ -30,6 +31,9 @@ export const Carrito = () => {
 	}
 
 	const removeProducto = id =>{
+		<Toaster></Toaster>
+
+		
 		if(window.confirm("¿Quieres suspender el producto?")){
 			carrito.forEach((item, index)=>{
 				if(item.id === id){

@@ -14,7 +14,6 @@ export const ProductosDetalles = () => {
   let item = 0;
 
   useEffect(() =>{
-    console.log('re render' , params.id)
     item=0;
     productos.forEach(producto =>{
       if(producto.id === parseInt(params.id)){
@@ -24,19 +23,18 @@ export const ProductosDetalles = () => {
     })
   },[params.id, productos])
 
-  console.log(url)
 
-  useEffect(() =>{
-    const values = `${detalle.img1}${url}${detalle.img2}`;
-    setImages(values) 
-  },[url, params.id])
+  // useEffect(() =>{
+  //   const values = `${detalle.img1}${url}${detalle.img2}`;
+  //   setImages(values) 
+  // },[url, params.id])
 
-  const handleInput = (e) =>{
-  const number = e.target.value.toString().padStart(2,'01')
-   setUrl(number)
-  }
+  // const handleInput = (e) =>{
+  // const number = e.target.value.toString().padStart(2,'01')
+  //  setUrl(number)
+  // }
 
-  if(detalle.length < 1) return null;
+  // if(detalle.length < 1) return null;
 
   return (
     <>

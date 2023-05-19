@@ -61,7 +61,7 @@ export const ProductosDetalles = () => {
           <button onClick={() => addCarrito(detalle.id)}>
             Añadir al carrito
           </button>
-          
+           
           {
             url ? <img src={images} alt={detalle.title}/> : <img src={detalle.image} alt={detalle.title}/>
           }
